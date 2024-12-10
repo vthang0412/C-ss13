@@ -1,5 +1,5 @@
 #include <stdio.h>
-// Khai bao nguyen mau ham 
+
 void display(int a[100][100], int n) ;
 void ketqua(int a[100][100], int n);
 
@@ -14,7 +14,6 @@ int main() {
     return 0;
 }
 
-// Khai bao logic ham 
 void display(int a[100][100], int n) {
     printf("Nhap cac phan tu trong ma tran:\n");
     for (int i = 0; i < n; i++) {
