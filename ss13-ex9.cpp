@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-void displayMenu(int *choice);
 void nhapMang(int arr[50][50], int n, int m);
 void inMang(int arr[50][50], int n, int m);
 void inGoc(int arr[50][50], int n, int m);
@@ -28,7 +27,16 @@ int main() {
     } while (m < 1 || m > 50);
     
     do {
-        displayMenu(&choice); 
+    printf("\n-----------------MENU----------------\n");
+    printf("1. Nhap gia tri cac phan tu cua mang\n");
+    printf("2. In gia tri cac phan tu cua mang theo ma tran\n");
+    printf("3. In ra cac phan tu o goc theo ma tran\n");
+    printf("4. In ra cac phan tu nam tren duong bien theo ma tran\n");
+    printf("5. In ra cac phan tu nam tren duong cheo chinh va duong cheo phu theo ma tran\n");
+    printf("6. In ra cac phan tu la so nguyen to theo ma tran\n");
+    printf("7. Thoat\n");
+    printf("Lua chon cua ban: ");
+    scanf("%d", &choice);
         switch (choice) {
             case 1:
                 nhapMang(arr, n, m);
@@ -57,19 +65,6 @@ int main() {
     } while (choice != 7);
     
     return 0;
-}
-
-void displayMenu(int *choice) {
-    printf("\n-----------------MENU----------------\n");
-    printf("1. Nhap gia tri cac phan tu cua mang\n");
-    printf("2. In gia tri cac phan tu cua mang theo ma tran\n");
-    printf("3. In ra cac phan tu o goc theo ma tran\n");
-    printf("4. In ra cac phan tu nam tren duong bien theo ma tran\n");
-    printf("5. In ra cac phan tu nam tren duong cheo chinh va duong cheo phu theo ma tran\n");
-    printf("6. In ra cac phan tu la so nguyen to theo ma tran\n");
-    printf("7. Thoat\n");
-    printf("Lua chon cua ban: ");
-    scanf("%d", choice);
 }
 
 void nhapMang(int arr[50][50], int n, int m) {
@@ -138,4 +133,3 @@ void inSoNguyenTo(int arr[50][50], int n, int m) {
         printf("\n");
     }
 }
-
