@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-void displayMenu(int *choice);
 void nhapMang(int arr[], int *n);
 void inMang(int arr[], int n);
 void themPhanTu(int arr[], int *n);
@@ -18,7 +17,21 @@ int main() {
     char chonSapXep, chonTimKiem;
 
     do {
-        displayMenu(&choice);
+ 	printf("\n-----------------------MENU-------------------------\n");
+    printf("1. Nhap so phan tu can nhap va gia tri cac phan tu\n");
+    printf("2. In ra gia tri cac phan tu dang quan ly\n");
+    printf("3. Them mot phan tu vao vi tri chi dinh\n");
+    printf("4. Sua mot phan tu o vi tri chi dinh\n");
+    printf("5. Xoa mot phan tu o vi tri chi dinh\n");
+    printf("6. Sap xep cac phan tu\n");
+    printf("   a. Sap xep giam dan\n");
+    printf("   b. Sap xep tang dan\n");
+    printf("7. Tim kiem phan tu\n");
+    printf("   a. Tim kiem tuyen tinh\n");
+    printf("   b. Tim kiem nhi phan\n");
+    printf("8. Thoat\n");
+    printf("Lua chon cua ban: ");
+    scanf("%d", &choice);
         switch (choice) {
             case 1:
                 nhapMang(arr, &n);
@@ -63,24 +76,6 @@ int main() {
         }
     } while (choice != 8);
     return 0;
-}
-
-void displayMenu(int *choice) {
-    printf("\n-----------------------MENU-------------------------\n");
-    printf("1. Nhap so phan tu can nhap va gia tri cac phan tu\n");
-    printf("2. In ra gia tri cac phan tu dang quan ly\n");
-    printf("3. Them mot phan tu vao vi tri chi dinh\n");
-    printf("4. Sua mot phan tu o vi tri chi dinh\n");
-    printf("5. Xoa mot phan tu o vi tri chi dinh\n");
-    printf("6. Sap xep cac phan tu\n");
-    printf("   a. Sap xep giam dan\n");
-    printf("   b. Sap xep tang dan\n");
-    printf("7. Tim kiem phan tu\n");
-    printf("   a. Tim kiem tuyen tinh\n");
-    printf("   b. Tim kiem nhi phan\n");
-    printf("8. Thoat\n");
-    printf("Lua chon cua ban: ");
-    scanf("%d", choice);
 }
 
 void nhapMang(int arr[], int *n) {
@@ -253,4 +248,3 @@ int isSorted(int arr[], int n) {
     }
     return 1; 
 }
-
